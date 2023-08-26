@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var confirmEmail = document.getElementById("confirmEmail").value;
+
+            if (email !== confirmEmail) {
+                alert("Email addresses do not match. Please verify.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">New York State </a></li>
+            <li><a href="buffalo.html">Buffalo - Wonder of the State</a></li>
+            <li><a href="albany.html">Albany - State Capital</a></li>
+            <li><a href="newyork.html">New York City - Biggest City of the State</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Contact Form</h2>
+	<form class="contact-form" onsubmit="return validateEmail();">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" placeholder="Enter your first name" required><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Enter your last name" required><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" placeholder="Enter your email address" required><br>
+
+            <label for="confirmEmail">Confirm Email Address:</label>
+            <input type="email" id="confirmEmail" placeholder="Confirm your email address" required><br>
+
+            <label for="question">Your Question:</label>
+            <textarea id="question" placeholder="Type your question here" rows="4" required></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
